@@ -1,11 +1,12 @@
 "use client"
 
-import Link from 'next/link'
 import React from 'react'
+import Link from 'next/link'
+import "./navbar.styles.scss"
 
 export default function Navbar() {
   return (
-    <div id="navbar" className='bg-base-dark'>
+    <div id="navbar" className='bg-base-dark items-center'>
       <div className='max-width-page'>
         <div>
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

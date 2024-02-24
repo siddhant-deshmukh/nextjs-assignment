@@ -1,0 +1,137 @@
+#navbar {
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    // Input container
+    div {
+      width: 258px;
+      padding: 6px;
+      border-radius: 8px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      color: #626E79;
+      background-color: white;
+      border: 1px solid #E1E4E6;
+
+      svg {
+        // input magnifying glass svg
+        width: 24px;
+        height: 24px;
+      }
+
+      input {
+        // input
+        width: 100%;
+        font-size: 15px;
+        margin-left: 6px;
+
+        padding: 0;
+        outline: 0;
+        border: 0;
+      }
+    }
+
+    // Nav List on big screen
+    >nav {
+      width: 100%;
+      max-width: 450px;
+
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        color: #D1D6DA;
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @media (max-width: 900px) {
+      >nav {
+        display: none;
+      }
+    }
+
+    button {
+      display: none;
+    }
+
+    // Nav List on small screen
+    @media (max-width: 900px) {
+      button {
+        display: block;
+        position: relative;
+        width: 43px;
+        height: 43px;
+        padding: 4px;
+        background-color: transparent;
+        outline: none;
+        border: 1px solid #727D87;
+        color: white;
+        border-radius: 6px;
+
+        svg {
+          width: 35px;
+          height: 35px;
+        }
+
+        #nav-dropdown {
+          display: none;
+          position: absolute;
+          top: 55px;
+          right: 0px;
+          z-index: 40;
+          width: 150px;
+          padding: 0px;
+          overflow: hidden;
+          border: none;
+
+          nav {
+            display: flex;
+            flex-direction: column;
+
+            a {
+              width: 100%;
+              padding: 12px;
+              font-size: 15px;
+              background-color: #727D87;
+              color: white;
+              text-align: left;
+            }
+
+            a:hover {
+              background-color: #5C6874;
+            }
+          }
+        }
+      }
+
+    }
+
+    @media (max-width: 1024px) {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,128 @@
+#related-deals {
+  h2 {
+    color: #2C384A;
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 400;
+  }
+
+  @media (max-width: 800px) {
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  #card-list {
+
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+
+    overflow-x: auto;
+
+    >div {
+      width: 333px;
+      min-width: 333px;
+      height: 425px;
+      // border: 1px solid #727D87;
+      border-radius: 12px;
+      background-color: white;
+
+      flex-wrap: nowrap;
+      display: flex;
+      flex-direction: column;
+      padding-top: 0px;
+
+      .img-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 190px;
+      }
+
+      .item-info {
+        padding: 20px;
+        padding-top: 0px;
+
+        .deals {
+          display: flex;
+          margin-left: auto;
+
+          span {
+            background-color: #F2F4F7;
+            border-radius: 8px;
+            color: #074786;
+            font-size: 13px;
+            line-height: 20px;
+            padding: 4px 8px;
+            margin-right: 10px;
+          }
+        }
+
+        h4 {
+          color: #626E79;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 7px;
+        }
+
+        p {
+          color: #626E79;
+          font-size: 16px;
+          line-height: 24px;
+          margin-top: 0px;
+          margin-bottom: 10px;
+        }
+
+        .price {
+          display: flex;
+          align-items: flex-end;
+
+          >div {
+            font-size: 20px;
+            line-height: 28px;
+            color: #5C6874;
+          }
+
+          s {
+            font-size: 14px;
+            line-height: 24px;
+            color: #9FA9B3;
+            margin-left: 15px;
+          }
+
+          span {
+            font-size: 13px;
+            line-height: 24px;
+            color: #EF4C5D;
+            margin-left: 15px;
+          }
+        }
+
+        button {
+          margin-top: 10px;
+          color: white;
+          background-color: #1B88F4;
+          border-radius: 12px;
+          padding: 12px 0px;
+          font-size: 16px;
+          line-height: 24px;
+          width: 100%;
+          outline: none;
+          border: none;
+        }
+      }
+
+    }
+  }
+
+  #card-list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+}
