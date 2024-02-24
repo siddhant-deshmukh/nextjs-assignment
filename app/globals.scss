@@ -64,6 +64,71 @@
         text-decoration: underline;
       }
     }
+
+    button {
+      display: none;
+    }
+
+    @media (max-width: 1024px) {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    @media (max-width: 900px) {
+      >nav {
+        display: none;
+      }
+
+      button {
+        display: block;
+        position: relative;
+        width: 43px;
+        height: 43px;
+        padding: 4px;
+        background-color: transparent;
+        outline: none;
+        border: 1px solid #727D87;
+        color: white;
+        border-radius: 6px;
+
+        svg {
+          width: 35px;
+          height: 35px;
+        }
+
+        #nav-dropdown {
+          display: none;
+          position: absolute;
+          top: 55px;
+          right: 0px;
+          z-index: 40;
+          width: 150px;
+          padding: 0px;
+          overflow: hidden;
+          border: none;
+
+          nav {
+            display: flex;
+            flex-direction: column;
+
+            a {
+              width: 100%;
+              padding: 12px;
+              font-size: 15px;
+              background-color: #727D87;
+              color: white;
+              text-align: left;
+            }
+
+            a:hover {
+              background-color: #5C6874;
+            }
+          }
+        }
+      }
+
+
+    }
   }
 }
 
@@ -86,11 +151,18 @@ main {
     line-height: 60px;
   }
 
+  @media (max-width: 800px) {
+    h1 {
+      font-size: 36px;
+      line-height: 48px;
+    }
+  }
+
   #bar-1 {
     //h-44px
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
     padding: 10px 0px;
     border-top: 1.5px solid #E1E4E6;
@@ -116,6 +188,22 @@ main {
 
     }
 
+    @media (max-width: 800px) {
+      >div {
+        flex-direction: column;
+
+        >div {
+          font-size: 12px;
+        }
+
+        svg {
+          width: 15px;
+          height: 15px;
+          margin-right: 5px;
+        }
+      }
+    }
+
     button {
       color: #727D87;
       background-color: transparent;
@@ -135,6 +223,7 @@ main {
   #tabs {
     display: flex;
     padding: 15px 0px;
+    flex-wrap: wrap;
 
     button {
       // height: 36px;
@@ -155,6 +244,16 @@ main {
       background-color: white;
     }
 
+    @media (max-width: 800px) {
+      button {
+        margin-right: 10px;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+    }
+
     button:hover {
       background-color: #eef1f4;
       cursor: pointer;
@@ -169,7 +268,7 @@ main {
     font-size: 13px;
     line-height: 20px;
     font-weight: 400;
-
+    flex-wrap: wrap;
 
     li {
       display: flex;
@@ -206,6 +305,13 @@ main {
     font-size: 32px;
     line-height: 44px;
     font-weight: 400;
+  }
+
+  @media (max-width: 800px) {
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 
   #card-list {
@@ -314,6 +420,7 @@ main {
 
     }
   }
+
   #card-list::-webkit-scrollbar {
     width: 0;
     height: 0;
@@ -336,6 +443,19 @@ footer {
     padding: 10px;
     display: flex;
     justify-content: space-between;
+
+    .list-container {
+      display: flex;
+      width: 50%;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 900px) {
+      .list-container {
+        width: 70%;
+      }
+    }
 
     ul {
       display: flex;
@@ -381,6 +501,29 @@ footer {
       }
     }
   }
+
+  @media (max-width: 800px) {
+    >div {
+      width: 200px;
+      margin: 25px;
+      flex-direction: column;
+
+      .list-container {
+        width: 100%;
+        padding: 0px;
+
+        ul {
+          padding-left: 0px;
+          padding-right: 20px;
+        }
+      }
+
+      >div {
+        margin-top: 50px;
+        justify-content: flex-end;
+      }
+    }
+  }
 }
 
 #sign-up {
@@ -397,6 +540,13 @@ footer {
     margin: 0px;
   }
 
+  @media (max-width: 800px) {
+    h1 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
   >div {
     display: flex;
     border-radius: 12px;
@@ -406,9 +556,16 @@ footer {
 
     input {
       width: 348px;
-      outline: none;
       padding: 15px;
+      outline: none;
       border: 1px solid #eef1f4;
+    }
+
+    @media (max-width: 800px) {
+      input {
+        width: 200px;
+        padding: 15px;
+      }
     }
 
     button {
@@ -429,7 +586,7 @@ footer {
   #sign-up {
     flex-direction: column;
 
-    > div {
+    >div {
       margin-top: 10px;
       margin-left: auto;
     }
@@ -449,8 +606,8 @@ footer {
 
 .max-width-page {
   max-width: 1024px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -460,8 +617,21 @@ footer {
     padding-left: 0px;
     padding-right: 0px;
   }
-  .max-width-page > * {
+
+  .max-width-page>* {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 712px) {
+  
+
+  .max-width-page>* {
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+
+button:hover {
+  cursor: pointer;
 }

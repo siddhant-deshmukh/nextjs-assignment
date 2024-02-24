@@ -4,21 +4,23 @@ export default function Footer() {
   return (
     <footer className='bg-base-dark'>
       <div className='max-width-page'>
-        <ul>
-          <div>Categories</div>
-          <li>Web Builder</li>
-          <li>Hosting</li>
-          <li>Data Center</li>
-          <li>Robotic-Automation</li>
-        </ul>
-        <ul>
-          <div>Contact</div>
-          <li>Contact</li>
-          <li>Privacy Policy</li>
-          <li>Terms Of Service</li>
-          <li>Categories</li>
-          <li>About</li>
-        </ul>
+        <div className='list-container'>
+          <ul>
+            <div>Categories</div>
+            <li>Web Builder</li>
+            <li>Hosting</li>
+            <li>Data Center</li>
+            <li>Robotic-Automation</li>
+          </ul>
+          <ul>
+            <div>Contact</div>
+            <li>Contact</li>
+            <li>Privacy Policy</li>
+            <li>Terms Of Service</li>
+            <li>Categories</li>
+            <li>About</li>
+          </ul>
+        </div>
         <div>
           <button>
             <span>United States</span>
