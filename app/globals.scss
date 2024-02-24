@@ -212,16 +212,19 @@ main {
 
     display: flex;
     justify-content: space-between;
+    max-width: 100%;
+
+    overflow-x: auto;
 
     >div {
-
-
       width: 333px;
+      min-width: 333px;
       height: 425px;
       // border: 1px solid #727D87;
       border-radius: 12px;
       background-color: white;
 
+      flex-wrap: nowrap;
       display: flex;
       flex-direction: column;
       padding-top: 0px;
@@ -311,6 +314,11 @@ main {
 
     }
   }
+  #card-list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
 }
 
 footer {
@@ -351,21 +359,21 @@ footer {
 
     }
 
-    > div {
+    >div {
       display: flex;
       align-items: center;
 
-      > button {
+      >button {
         height: fit-content;
         display: flex;
         align-items: center;
-  
+
         height: fit-content;
         background-color: transparent;
         color: #D1D6DA;
         outline: none;
         border: none;
-  
+
         svg {
           color: white;
           margin-left: 10px;
@@ -417,6 +425,17 @@ footer {
   }
 }
 
+@media (max-width: 1024px) {
+  #sign-up {
+    flex-direction: column;
+
+    > div {
+      margin-top: 10px;
+      margin-left: auto;
+    }
+  }
+}
+
 #main-container {
   width: 100%;
   display: flex;
@@ -430,5 +449,19 @@ footer {
 
 .max-width-page {
   max-width: 1024px;
-  padding: 5px 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (max-width: 1024px) {
+  .max-width-page {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .max-width-page > * {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
